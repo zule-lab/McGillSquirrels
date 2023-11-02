@@ -52,7 +52,7 @@ rsconnect/
 *_targets/
 
 # input squirrel data - don't have permission to share 
-input/SquirrelData_v1.csv
+input/
 
 # output results - don't have permission to share 
-*ouput/
+output/
