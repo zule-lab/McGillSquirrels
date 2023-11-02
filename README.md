@@ -16,12 +16,12 @@ In the case of b) :
 
 The input file SquirrelData_v1.csv that is referenced in the code is field data collected by Francis Dinh. The original file contains park names, latitude and longitude of sampling points, city/locale of the park, date of sampling, number of melanic squirrels observed, and number of gray squirrels observed. To have this repository run without the original file, you can simulate the data or format your data so that the code runs successfully. 
 
-At bare minimum, this requires a CSV file that contains columns of Site.ID (park name), Longitude, and Latitude with coordinates projected using WGS 84 (epsg 4326). Example: 
+At bare minimum, this requires a CSV file that contains columns of Site.Id (park name), Longitude, and Latitude with coordinates projected using WGS 84 (epsg 4326). Example: 
 
 ```{r}
 library(tibble)
 
-raw_squirrel <- tibble(Site.ID = c('Park1', 'Park2'), Latitude = c(45.52139, 45.52519), Longitude = c(-73.67197, -73.67534))
+raw_squirrel <- tibble(Site.Id = c('Park1', 'Park2'), Latitude = c(45.52139, 45.52519), Longitude = c(-73.67197, -73.67534))
 ```
 
 ## Output 
