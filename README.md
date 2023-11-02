@@ -2,7 +2,7 @@
 
 This project was created to assist an undergraduate student in Dr. Hendry's lab at McGill acquire spatial data for an analysis he is doing on coat colour. 
 
-To run this project, cone this repository, install all necessary packages, open the project and run `targets::tar_make()`. 
+To run this project, clone this repository, install all necessary packages, open the project and run `targets::tar_make()`. 
 
 **IMPORTANT NOTE**
 
