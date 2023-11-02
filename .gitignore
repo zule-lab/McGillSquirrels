@@ -47,3 +47,12 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# targets 
+*_targets/
+
+# input squirrel data - don't have permission to share 
+input/SquirrelData_v1.csv
+
+# output results - don't have permission to share 
+*ouput/
