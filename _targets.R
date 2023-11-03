@@ -117,9 +117,6 @@ c(
   tar_target(
     full_data,
     combine_data(parks, canopy, roads, building_dens, building_height)
-    #TODO: add temperature 
   )
-  
-  
   
 )
