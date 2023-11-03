@@ -48,7 +48,11 @@ c(
     read.csv(!!.x, encoding = 'UTF-8')
   ),
   
-  # TODO: add temp target here
+  tar_file_read(
+    lst_raw,
+    'input/land-surface-temperature.csv',
+    read.csv(!!.x, encoding = 'UTF-8')
+  ),
   
   tar_target(
     parks,
@@ -77,7 +81,6 @@ c(
     building_heights_raw %>% 
       select(-c(system.index, .geo)) %>% 
       distinct() %>% 
-      # there are some holes in the DEM data so there are zeroes in the dataset
       filter(mean > 0) %>%
       drop_na(mean) %>% 
       mutate(Site.Id = Site_Id,
