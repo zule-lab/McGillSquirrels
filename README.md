@@ -52,3 +52,6 @@ After running the code, there will be missing data in some columns.
 - First, canopy cover for parks that are not contained within the datasets downloaded by the CMM will show as NA. For original dataset, this includes only the parks located in Kahnawake, as they are not included in any of the canopy cover datasets.
 - Second, building density measures (i.e., no_buildings, building_area_km2, no_buildings_perkm, and building_area_perkm) will show as NA if there were no buildings completely within a 100 m radius. For the original dataset, this is true for three parks.
 - Third, the DEM (digital elevation model) data used to calculate building height has some missing data. This results in NAs for mean_bldhgt_m and stdDev_bldhgt columns for some parks.
+
+## Google Earth Engine
+Building heights and land surface temperature were calculated using Google Earth Engine. Scripts for this can be found in `ee/`. The parks feature collection used in these scripts is the output of the 'parks' target, uploaded to Earth Engine.
