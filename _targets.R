@@ -90,6 +90,26 @@ c(
   ),
   
   tar_target(
+    lst,
+    lst_raw %>% 
+      select(c(Site_Id, Date, Gray, Melanic, LST_mean, LST_stdDev, LST_count, month_mean)) %>% 
+      rename(Site.Id = Site_Id, month = month_mean) %>% 
+      mutate(month = case_when(month == 1 ~ 'Jan',
+                               month == 2 ~ 'Feb',
+                               month == 3 ~ 'Mar',
+                               month == 4 ~ 'Apr', 
+                               month == 5 ~ 'May', 
+                               month == 6 ~ 'Jun', 
+                               month == 7 ~ 'Jul',
+                               month == 8 ~ 'Aug',
+                               month == 9 ~ 'Sep',
+                               month == 10 ~ 'Oct', 
+                               month == 11 ~ 'Nov', 
+                               month == 12 ~ 'Dec')) %>% 
+      write.csv(., 'output/temperature-dataset.csv')
+  ),
+  
+  tar_target(
     building_dens,
     get_buildings(parks)
   ),
