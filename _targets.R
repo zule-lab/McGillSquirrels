@@ -72,8 +72,20 @@ c(
   ),
   
   tar_target(
+    imp_parks, 
+    get_impervious(canopy_files, parks),
+    pattern = map(canopy_files),
+    iteration = 'list'
+  ),
+  
+  tar_target(
     roads,
     get_roads(parks)
+  ),
+  
+  tar_target(
+    roads_shp, 
+    get_roads_shp(parks)
   ),
   
   tar_target(
@@ -116,7 +128,7 @@ c(
   
   tar_target(
     full_data,
-    combine_data(parks, canopy, roads, building_dens, building_height)
+    combine_data(parks, canopy, roads, roads_shp, building_dens, building_height)
   )
   
 )
