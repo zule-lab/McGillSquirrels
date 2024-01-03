@@ -1,4 +1,4 @@
-combine_data <- function(parks, canopy, roads, building_dens, building_height){
+combine_data <- function(parks, canopy, roads, roads_shp, building_dens, building_height){
   
   parks_t <- st_transform(parks, 3347)
   
@@ -9,6 +9,7 @@ combine_data <- function(parks, canopy, roads, building_dens, building_height){
     left_join(., roads) %>% 
     left_join(., st_set_geometry(building_dens, NULL)) %>% 
     left_join(., building_height) %>% 
+    left_join(., st_set_geometry(roads_shp, NULL))
     distinct() %>% 
     rename(min_road_dist_m = min_dist_m,
            min_road_dist_km = min_dist_km,
