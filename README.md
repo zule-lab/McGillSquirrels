@@ -37,6 +37,7 @@ The final output dataframe contains several columns. Here is a description of ea
 - Gray = number of gray squirrels observed 
 - park_area_m2 = area of the park in m^2
 - can_cov_per = percentage of park area with canopy cover
+- imp_per = percentage of park area with impervious surface
 - min_road_dist_m = distance to closest major road in metres
 - min_road_dist_km = distance to closest major road in kilometres 
 - no_buildings = number of buildings within a 100 m radius of the park
@@ -45,6 +46,8 @@ The final output dataframe contains several columns. Here is a description of ea
 - building_area_perkm = sum of building area divided by buffer area (buffer that includes the park + 100 m radius surrounding the park)
 - mean_bldhgt_m = average building height of buildings contained within a 100 m radius of the park (in metres)
 - stdDev_bldhgt = the standard deviation of building height of buildings within a 100 m radius of the park (in metres)
+- road_area_m2 = sum of road, alleyway, and sidewalk area within the park and within a 100 m radius (in metres squared)
+- road_area_km2 = sum of road, alleyway, and sidewalk area within the park and within a 100 m radius (in kilometres squared)
 
 ## Missing Data
 After running the code, there will be missing data in some columns. 
