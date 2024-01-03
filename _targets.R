@@ -79,6 +79,11 @@ c(
   ),
   
   tar_target(
+    impervious,
+    combine_impervious(imp_parks, parks)
+  ),
+  
+  tar_target(
     roads,
     get_roads(parks)
   ),
@@ -128,7 +133,7 @@ c(
   
   tar_target(
     full_data,
-    combine_data(parks, canopy, roads, roads_shp, building_dens, building_height)
+    combine_data(parks, canopy, impervious, roads, roads_shp, building_dens, building_height)
   )
   
 )
